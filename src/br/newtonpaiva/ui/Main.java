@@ -1,6 +1,9 @@
 package br.newtonpaiva.ui;
 
 import br.newtonpaiva.dominio.Conta;
+import br.newtonpaiva.dominio.pessoa.Pessoa;
+import br.newtonpaiva.dominio.pessoa.PessoaFisica;
+import br.newtonpaiva.dominio.pessoa.PessoaJuridica;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,5 +26,17 @@ public class Main {
             System.out.println("Contas diferentes");
         }
         System.out.println(c.getSaldo());
+
+        // Pessoa p = new Pessoa();
+
+        Pessoa pessoa[] = new Pessoa[4];
+        pessoa[0] = new PessoaFisica();
+        pessoa[1] = new PessoaJuridica();
+        pessoa[2] = new PessoaJuridica();
+        pessoa[3] = new PessoaFisica();
+
+        for(Pessoa p : pessoa) //chama lista pessoa
+            p.validarDocumento();
+
     }
 }

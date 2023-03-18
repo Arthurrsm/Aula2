@@ -10,6 +10,7 @@ public class ContaEspecial extends Conta {
             setSaldo(getSaldo() - valor);
             return getSaldo();
         }
+        return valor;
     }
 
     public Double getLimite() {
